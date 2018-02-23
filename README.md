@@ -62,6 +62,7 @@
 
     - `$ composer network ping --card admin@notes-network`
 
+
 ## How to install/run Platform API( and API Document) in API Server
 
 - Prepare API Server with Ubuntu 16.04
@@ -72,7 +73,7 @@
 
     - See above for detailed commands
 
-- Prepare for folowing composer commands
+- Prepare for following composer commands
 
     - `$ cd **/notesnetwork/api`
 
@@ -96,10 +97,52 @@
 
     - exports.cloudant_password : Password for IBM Cloudant
 
+- Run app.js with Node.js
+
+    - `$ node app`
+
+
+## How to install/run transaction viewer
+
+- Prepare application server with Ubuntu 16.04
+
+- Login to that server(Ubuntu 16.04) with SSH or terminal
+
+- Install Node.js(V6.x) and npm
+
+    - See above for detailed commands
+
+- Prepare for following composer commands
+
+    - `$ cd **/notesnetwork/viewer`
+
+- Install dependencies
+
+    - `$ npm install`
+
+- (Optional)Edit setttings.js, if needed.
+
+    - exports.api_url : URL for above API server
+
+    - exports.basic_username : Username for Basic authentication
+
+    - exports.basic_password : Password for Basic authentication
 
 - Run app.js with Node.js
 
     - `$ node app`
+
+
+## How to use this application from IBM Notes client
+
+- Copy(or move) nsf/notesnetwork.nsf into your Notes' workspace. This contains sample design(Form, View, Agent, ..).
+
+- Open Help Using document with IBM Notes, and follow that instruction. You need to edit notes.ini variable.
+
+
+## Demo movie
+
+https://youtu.be/LH-clvMmebg
 
 
 ## Licensing
