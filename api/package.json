@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "mkdir -p /home/vcap/app/.composer-connection-profiles/vanadium/; cp /home/vcap/app/favricenv/connection-profile/connection.json /home/vcap/app/.composer-connection-profiles/vanadium/; mkdir -p /var/tmp/keyValStore.panasonic/; cp /home/vcap/app/favricenv/creds/* /var/tmp/keyValStore.panasonic/; node app.js"
+    "start": "composer card create -n notes-network -p mychannel1_connection.json -u admin -c admin_pub.pem -k admin_priv.pem; composer card import -f admin@notes-network.card; node app.js"
   },
   "author": "",
   "license": "MIT",
